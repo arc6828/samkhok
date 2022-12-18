@@ -100,7 +100,7 @@ $author_images = [
                 <div class="row g-5">
                     <?php foreach ($data->channel->item as $index => $item) { ?>
                         <?php
-                        if ($index == 0)  continue ; 
+                        if ($index == 0)  continue;
                         ?>
                         <div class="col-lg-4">
                             <div class="post-entry d-block small-post-entry-v">
@@ -161,12 +161,12 @@ $author_images = [
                             <div class="post-entry d-block small-post-entry-v">
                                 <div class="thumbnail">
                                     <a target="_blank" href="<?= $item->link ?>">
-                                        <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" />
+                                        <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="height: 400px; object-fit:cover;" />
                                     </a>
                                 </div>
                                 <div class="content">
                                     <div class="post-meta mb-1">
-                                        <a href="#" class="category">Business</a>
+                                        <!-- <a href="#" class="category">Business</a> -->
                                         <a href="#" class="category">Travel</a>
                                         &mdash;
                                         <span class="date"><?= $item->pubDate ?></span>
@@ -238,7 +238,9 @@ $author_images = [
                                     </div>
                                 </div>
                                 <?php
-                                if ($index >= 3) {  break; } 
+                                if ($index >= 3) {
+                                    break;
+                                }
                                 ?>
                             <?php } ?>
                         </div>
@@ -286,7 +288,7 @@ $author_images = [
                                     </div>
                                 </div>
                                 <?php
-                                if ($index >= 2)  break; 
+                                if ($index >= 2)  break;
                                 ?>
                             <?php } ?>
                         </div>
