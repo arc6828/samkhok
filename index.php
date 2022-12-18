@@ -1,8 +1,13 @@
 <?php
-// $jsonurl = "http://api.wipmania.com/json";
-// $json = file_get_contents($jsonurl);
-// var_dump(json_decode($json));
+// META DATA
+$title = "สามโคก::ดินแดนแห่งภูมิปัญญาท้องถิ่นริมสองฝั่งเจ้าพระยา";
+$author = "ทีมวิจัยสามโคก";
+$description = "อำเภอสามโคก จังหวัดปทุมธานี เป็นเมื่องที่มีประวัติศาสตร์ยาวนานตั้งแต่สมัยอยุธยาเป็นราชธานี ตั้งอยู่ริมสองฝั่งของแม่น้ำเจ้าพระยา มีภูมิปัญญา วัตนธรรม ประเพณีท้องถิ่นท้องถิ่นที่เป็นเอกลัษณ์ อีกทั้งยังเต็มไปด้วยสถานที่โบราณสถานและสถานที่ท่องเที่ยวต่างๆ สำหรับการพักผ่อนหย่อนใจ";
+$keywords = "สามโคก, ปทุมธานี, แม่น้ำเจ้าพระยา, โบราณ, ท่องเที่ยว, ภูมิปัญญา, ประเพณี, วัตนธรรม";
+$url = "https://www.samkhok.org";
+$image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
 
+// DATA
 $data = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok"));
 $laravel = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok"));
 $ubuntu = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok"));

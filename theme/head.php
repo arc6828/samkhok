@@ -1,12 +1,32 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- {{-- <link rel="preconnect" href="https://fonts.gstatic.com/"> --}} -->
+<meta name="title" content="<?= $title ?>" />
+<meta name="author" content="<?= $author ?>" />
+<meta name="description" content="<?= $description ?>" />
+<meta name="keywords" content="<?= $keywords ?>" />
+<link rel="canonical" href="<?= $url ?>" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="<?= $url ?>" />
+<meta property="og:title" content="<?= $title ?>" />
+<meta property="og:description" content="<?= $description ?>" />
+<meta property="og:image" content="<?= $image ?>" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="<?= $url ?>" />
+<meta property="twitter:title" content="<?= $title ?>" />
+<meta property="twitter:description" content="<?= $description ?>" />
+<meta property="twitter:image" content="<?= $image ?>" />
+
+<title><?= $title ?> </title>
+<!-- <link href="img/css.png" rel="icon"> -->
+<!--  <link rel="preconnect" href="https://fonts.gstatic.com/">  -->
 <link href="assets/magdesign/css2.css" rel="stylesheet">
 <link href="assets/magdesign/all.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
-<!-- <link href="img/css.png" rel="icon"> -->
-<title>สามโคก::ดินแดนแห่งภูมิปัญญากลางสายน้ำ </title>
-<!-- {{-- <script defer="" src="url('/magdesign/s.js')"></script> --}} -->
+<!--  <script defer="" src="url('/magdesign/s.js')"></script>  -->
 
 <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
 <style>
