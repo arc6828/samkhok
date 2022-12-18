@@ -22,7 +22,7 @@
     </div>
 </div>
 <!-- {{-- footer --}} -->
-<div class="site-footer">
+<div class="site-footer py-4">
     <div class="container">
         <div class="row justify-content-center copyright">
             <div class="col-lg-7 text-center">
@@ -41,10 +41,10 @@
                             document.write(new Date().getFullYear());
                         </script> All rights reserved
                     </p>
-                    <div class="d-block">
+                    <!-- <div class="d-block">
                         <a href="#" class="m-2">Terms & Conditions</a>/
                         <a href="{{ url('/cookies-policy') }}" class="m-2">Cookies Policy</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

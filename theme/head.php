@@ -21,12 +21,14 @@
 <meta property="twitter:image" content="<?= $image ?>" />
 
 <title><?= $title ?> </title>
-<!-- <link href="img/css.png" rel="icon"> -->
+<link href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Amphoe_1307.svg/250px-Amphoe_1307.svg.png" rel="icon">
 <!--  <link rel="preconnect" href="https://fonts.gstatic.com/">  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <link href="assets/magdesign/css2.css" rel="stylesheet">
 <link href="assets/magdesign/all.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
 <!--  <script defer="" src="url('/magdesign/s.js')"></script>  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
 <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
 <style>

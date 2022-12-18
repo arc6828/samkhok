@@ -11,8 +11,44 @@
     <div class="container">
         <div class="site-navigation">
             <div class="row">
-                <div class="col-md-6 text-center order-1 order-md-2 mb-3 mb-md-0">
-                    <a href="/" class="logo m-0 text-uppercase"><label>สามโคก</label></a>
+                <!-- logo -->
+                <div class="col-md-6 text-center order-2 order-md-2 mb-3 mb-md-0">
+                    <a href="." class="logo m-0 text-uppercase">
+                        <img class="" style="width: 30px; height: 30px; object-fit: cover; border-radius: 10px; " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Amphoe_1307.svg/250px-Amphoe_1307.svg.png" />
+                        <label class="h1">สามโคก</label>
+                    </a>
+                </div>
+                <!-- search -->
+                <div class="col-md-3 order-3 order-md-1">
+                    <form action="#" class="search-form">
+                        <span class="fa fa-search " style=" position: absolute;
+                            top: 10px;
+                            left: 15px;
+                            color: #ccc;
+                            font-size: 16px;"></span>
+                        <input type="search" class="form-control" placeholder="Search...">
+                    </form>
+                </div>
+                <!-- hamburger -->
+                <div class="col-md-3 text-end order-1 order-md-3 mb-0 mb-md-0">
+                    <div class="d-flex">
+                        <ul class="list-unstyled social me-auto">
+
+                            <li><a href="#"><i class="bi-youtube"></i></a></li>
+                            <li><a href="#"><i class="bi-facebook"></i></a></li>
+                            <li><a href="#"><i class="bi-telephone"></i></a></li>
+                        </ul>
+                        <a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block" data-toggle="collapse" data-target="#main-navbar">
+                            <span></span>
+                        </a>
+
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 text-center order-1 order-md-2 mb-3 mb-md-0">
+                    <a href="/" class="logo m-0 text-uppercase">
+                        <img class="" style="width: 30px; height: 30px; object-fit: cover; border-radius: 10px; " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Amphoe_1307.svg/250px-Amphoe_1307.svg.png" />
+                        <label class="h1">สามโคก</label>
+                    </a>
                 </div>
                 <div class="col-md-3 order-3 order-md-1">
                     <form action="#" class="search-form">
@@ -27,7 +63,6 @@
                 <div class="col-md-3 text-end order-2 order-md-3 mb-3 mb-md-0">
                     <div class="d-flex">
                         <ul class="list-unstyled social me-auto">
-                            <!-- {{-- <li><a href="#"><i class="fa fa-home"></i></a></li> --}} -->
 
                             <li><a href="#"><span class="icon-twitter"></span></a></li>
                             <li><a href="#"><span class="icon-facebook"></span></a></li>
@@ -38,7 +73,7 @@
                         </a>
 
                     </div>
-                </div>
+                </div> -->
             </div>
             <ul class="js-clone-nav d-none d-lg-inline-none text-start site-menu float-end">
                 <li class="active"><a href=".">หน้าแรก</a></li>

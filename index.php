@@ -1,7 +1,7 @@
 <?php
 // META DATA
-$title = "สามโคก::ดินแดนแห่งภูมิปัญญาท้องถิ่นริมสองฝั่งเจ้าพระยา";
-$author = "ทีมวิจัยสามโคก";
+$title = "สามโคก - ดินแดนแห่งภูมิปัญญาท้องถิ่นริมสองฝั่งเจ้าพระยา";
+$author = "ทีมวิจัยคณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์";
 $description = "อำเภอสามโคก จังหวัดปทุมธานี เป็นเมื่องที่มีประวัติศาสตร์ยาวนานตั้งแต่สมัยอยุธยาเป็นราชธานี ตั้งอยู่ริมสองฝั่งของแม่น้ำเจ้าพระยา มีภูมิปัญญา วัตนธรรม ประเพณีท้องถิ่นท้องถิ่นที่เป็นเอกลัษณ์ อีกทั้งยังเต็มไปด้วยสถานที่โบราณสถานและสถานที่ท่องเที่ยวต่างๆ สำหรับการพักผ่อนหย่อนใจ";
 $keywords = "สามโคก, ปทุมธานี, แม่น้ำเจ้าพระยา, โบราณ, ท่องเที่ยว, ภูมิปัญญา, ประเพณี, วัตนธรรม";
 $url = "https://www.samkhok.org";
@@ -9,9 +9,9 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
 
 // DATA
 $data = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok"));
-$laravel = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok"));
-$ubuntu = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok"));
-$git = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok"));
+$travel = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/travel"));
+$culture = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/culture"));
+$thinking = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/thinking"));
 
 $author_images = [
     "_KaoDhana" => "https://miro.medium.com/fit/c/88/88/1*25ZIxGT-YFj7cZVib4dVKA@2x.jpeg",
@@ -106,7 +106,7 @@ $author_images = [
                             <div class="post-entry d-block small-post-entry-v">
                                 <div class="thumbnail">
                                     <a target="_blank" href="<?= $item->link ?>">
-                                        <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" />
+                                        <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="height: 200px; object-fit:cover;" />
                                     </a>
                                 </div>
                                 <div class="content">
@@ -121,7 +121,7 @@ $author_images = [
                                             <?php } ?>
                                         <?php } ?>
                                         —
-                                        <span class="date">July 2, 2020</span>
+                                        <span class="date"><?= $item->pubDate ?></span>
                                     </div>
                                     <h2 class="heading mb-3"><a target="_blank" href="<?= $item->link ?>"><?= $item->title ?></a></h2>
                                     <p><?= mb_substr($item->first_paragraph, 0, 140) ?> ...</p>
@@ -156,7 +156,7 @@ $author_images = [
                     <span class="next" data-controls="next" aria-controls="most-popular-center" tabindex="-1">Next</span>
                 </div>
                 <div class="most-popular-slider" id="most-popular-center">
-                    <?php foreach ($laravel->channel->item as $item) { ?>
+                    <?php foreach ($travel->channel->item as $item) { ?>
                         <div class="item">
                             <div class="post-entry d-block small-post-entry-v">
                                 <div class="thumbnail">
@@ -198,11 +198,11 @@ $author_images = [
                     <div class="col-lg-6">
                         <div class="row mb-4">
                             <div class="col-12">
-                                <h2 class="h4 fw-bold">Ubuntu</h2>
+                                <h2 class="h4 fw-bold">culture</h2>
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <?php foreach ($ubuntu->channel->item as $index => $item) { ?>
+                            <?php foreach ($culture->channel->item as $index => $item) { ?>
                                 <div class="col-lg-12">
                                     <div class="post-entry d-md-flex xsmall-horizontal mb-5">
                                         <div class="me-md-3 thumbnail mb-3 mb-md-0">
@@ -246,11 +246,11 @@ $author_images = [
                     <div class="col-lg-6">
                         <div class="row mb-4">
                             <div class="col-12">
-                                <h2 class="h4 fw-bold">Git</h2>
+                                <h2 class="h4 fw-bold">thinking</h2>
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <?php foreach ($git->channel->item as $index => $item) { ?>
+                            <?php foreach ($thinking->channel->item as $index => $item) { ?>
                                 <div class="col-lg-12">
                                     <div class="post-entry d-md-flex xsmall-horizontal mb-5">
                                         <div class="me-md-3 thumbnail mb-3 mb-md-0">
