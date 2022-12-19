@@ -106,7 +106,7 @@ $author_images = [
                             <div class="post-entry d-block small-post-entry-v">
                                 <div class="thumbnail">
                                     <a target="_blank" href="<?= $item->link ?>">
-                                        <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="height: 200px; object-fit:cover;" />
+                                        <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="width:100%; height: 200px; object-fit:cover;" />
                                     </a>
                                 </div>
                                 <div class="content">
@@ -161,7 +161,7 @@ $author_images = [
                             <div class="post-entry d-block small-post-entry-v">
                                 <div class="thumbnail">
                                     <a target="_blank" href="<?= $item->link ?>">
-                                        <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="height: 400px; object-fit:cover;" />
+                                        <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="width:100%; height: 300px; object-fit:cover;" />
                                     </a>
                                 </div>
                                 <div class="content">
