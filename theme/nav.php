@@ -20,13 +20,13 @@
                 </div>
                 <!-- search -->
                 <div class="col-md-3 order-3 order-md-1">
-                    <form action="#" class="search-form">
+                    <form autocomplete="off" action="#" class="search-form">
                         <span class="fa fa-search " style=" position: absolute;
                             top: 10px;
                             left: 15px;
                             color: #ccc;
                             font-size: 16px;"></span>
-                        <input type="search" class="form-control" placeholder="Search...">
+                        <input type="search" class="form-control autocomplete" id="searchbox" placeholder="Search...">
                     </form>
                 </div>
                 <!-- hamburger -->
