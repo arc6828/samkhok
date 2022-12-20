@@ -316,7 +316,7 @@ $author_images = [
                 data = data.map(function(item) {
                     return {
                         "title": item.title,
-                        "content": stripHtml(item.contentEncoded).replace(/[^ก-๛0-9]+/g, "") ,
+                        "content": stripHtml(item.contentEncoded).replace(/[^ก-๛0-9\s]+/g, "") ,
                         "link": item.link,
                     };
                 });
