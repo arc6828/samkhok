@@ -41,10 +41,10 @@ function autocomplete(inp, arr) {
         b.innerHTML += "";
 
         // PREFIX
-        let prefix_length = 10;
+        let prefix_length = 7;
         if (index_found > prefix_length) {
           b.innerHTML +=
-            "... " + arr[i][content_key].substr(index_found - 10, 10) + "";
+            "... " + arr[i][content_key].substr(index_found - prefix_length, prefix_length) + "";
         } else {
           b.innerHTML += arr[i][content_key].substr(0, index_found) + "";
         }

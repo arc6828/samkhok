@@ -14,7 +14,7 @@
                 <!-- logo -->
                 <div class="col-md-6 text-center order-2 order-md-2 mb-3 mb-md-0">
                     <a href="." class="logo m-0 text-uppercase">
-                        <img class="" style="width: 30px; height: 30px; object-fit: cover; border-radius: 10px; " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Amphoe_1307.svg/250px-Amphoe_1307.svg.png" />
+                        <img class="mx-2" style="width: 30px; height: 30px; object-fit: cover; border-radius: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Amphoe_1307.svg/250px-Amphoe_1307.svg.png" />
                         <label class="h1">สามโคก</label>
                     </a>
                 </div>
