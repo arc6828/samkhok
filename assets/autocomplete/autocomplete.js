@@ -57,7 +57,7 @@ function autocomplete(inp, arr) {
 
         //SUBFIX
         b.innerHTML += arr[i][content_key].substr(index_found + val.length, prefix_length) + " ...";
-        b.innerHTML += "<br><i class='autocomplete-title'>"+arr[i]["title"].substr(0, prefix_length*3) + " ... </i>";
+        b.innerHTML += "<br><i class='autocomplete-title'>"+arr[i]["title"].substr(0, prefix_length*4) + " ... </i>";
 
 
 
