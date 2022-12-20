@@ -49,7 +49,7 @@ $author_images = [
                                         <div class="post-entry d-lg-flex">
                                             <div class="me-lg-5 thumbnail mb-4 mb-lg-0">
                                                 <a target="_blank" href="<?= $item->link ?>">
-                                                    <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" data-pagespeed-url-hash="1105166545" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+                                                    <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid"  style="width:100%;  object-fit:cover;"/>
                                                 </a>
                                             </div>
                                             <div class="content align-self-center">
