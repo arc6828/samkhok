@@ -9,16 +9,16 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
 
 ?>
 
-<?php 
+<?php
 $profiles = [
-    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/wisrut.jpg" , "name" => "อาจารย์วิศรุต ขวัญคุ้ม" , "position" => "หัวหน้าโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/ing_orn.jpg" , "name" => "ผู้ช่วยศาสตราจารย์อิงอร วงษ์ศรีรักษา" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/phairin.jpg" , "name" => "ผู้ช่วยศาสตราจารย์ไพรินทร์ มีศรี" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/kamolmas.jpg" , "name" => "ผู้ช่วยศาสตราจารย์กมลมาศ วงษ์ใหญ่" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/daorathar.jpg" , "name" => "ดร.ดาวรถา วีระพันธ์" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/natradee.jpg" , "name" => "อาจารย์ณัฐรดี อนุพงค์" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/chavalit.jpg" , "name" => "อาจารย์ชวลิต โควีระวงศ์" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/pannarat.jpg" , "name" => "อาจารย์ปัณณรัตน์ วงศ์พัฒนานิภาส" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรนวัตกรรมดิจิทัลและวิศวกรรมซอฟต์แวร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
+    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/wisrut.jpg", "name" => "อาจารย์วิศรุต ขวัญคุ้ม", "position" => "หัวหน้าโครงการวิจัย", "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
+    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/ing_orn.jpg", "name" => "ผู้ช่วยศาสตราจารย์อิงอร วงษ์ศรีรักษา", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
+    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/phairin.jpg", "name" => "ผู้ช่วยศาสตราจารย์ไพรินทร์ มีศรี", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
+    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/kamolmas.jpg", "name" => "ผู้ช่วยศาสตราจารย์กมลมาศ วงษ์ใหญ่", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
+    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/daorathar.jpg", "name" => "ดร.ดาวรถา วีระพันธ์", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
+    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/natradee.jpg", "name" => "อาจารย์ณัฐรดี อนุพงค์", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
+    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/chavalit.jpg", "name" => "อาจารย์ชวลิต โควีระวงศ์", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
+    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/pannarat.jpg", "name" => "อาจารย์ปัณณรัตน์ วงศ์พัฒนานิภาส", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรนวัตกรรมดิจิทัลและวิศวกรรมซอฟต์แวร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
 ];
 ?>
 <!DOCTYPE html>
@@ -55,6 +55,9 @@ $profiles = [
                             <p class="">
                                 นอกจากนี้การรวบรวมองค์ความรู้ทั้งศาสตร์ชุมชนดั้งเดิมและผลิตภัณฑ์ต่าง ๆ ที่ได้จากการรวบรวมในงานวิจัยนี้ได้ถ่ายทอดผ่านการสร้างแหล่งเรียนรู้ในชุมชนที่ยั่งยืนเพื่อให้เกิดการแลกเปลี่ยนองค์ความรู้ในด้านต่าง ๆ เพื่ออนุรักษ์ส่งเสริมวัฒนธรรมและภูมิปัญญาพื้นบ้านของคนในชุมชน
                             </p>
+                            <p class="">
+                                โครงการพัฒนาแฟลตฟอร์มการจัดการเรียนรู้สาหรับสถานศึกษาวิวัฒน์ชุมชนในเขตพื้นที่อาเภอสามโคก จังหวัดปทุมธานี เป็นโครงการที่ได้รับทุนสนับสนุนจากกองทุนส่งเสริมวิทยาศาสตร์ วิจัยและนวัตกรรม (กองทุน ววน.) : งบประมาณด้านวิจัยและนวัตกรรม ประเภท Fundamental Fund ประจำปีงบประมาณ 2565
+                            </p>
                         </div>
 
                     </div>
@@ -70,23 +73,23 @@ $profiles = [
                     </div>
                 </div>
                 <div class="row">
-                    <?php foreach($profiles as $item){ ?>
-                    <div class="col-md-6 col-lg-4">
-                        <!-- Profile Card -->
-                        <div class="profile-card ">
-                            <div class="card shadow-sm border-soft">
-                                <img src="<?=$item->image?>" class="card-img-top" alt="..." style="height : 600px; object-fit:cover;">
+                    <?php foreach ($profiles as $item) { ?>
+                        <div class="col-md-6 col-lg-4">
+                            <!-- Profile Card -->
+                            <div class="profile-card ">
+                                <div class="card shadow-sm border-soft">
+                                    <img src="<?= $item->image ?>" class="card-img-top" alt="..." style="height : 600px; object-fit:cover;">
 
-                                <div class="card-body">
-                                    <h5 class="card-title"><?=$item->name?></h5>
-                                    <h6 class="card-subtitle text-gray"><?=$item->position?></h6>
-                                    <p class="card-text my-2"><?=$item->organization?></p>
-                                    
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $item->name ?></h5>
+                                        <h6 class="card-subtitle text-gray"><?= $item->position ?></h6>
+                                        <p class="card-text my-2"><?= $item->organization ?></p>
+
+                                    </div>
                                 </div>
                             </div>
+                            <!-- End of Profile Card -->
                         </div>
-                        <!-- End of Profile Card -->
-                    </div>
                     <?php } ?>
                 </div>
             </div>
