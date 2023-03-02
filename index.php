@@ -369,6 +369,16 @@ function pick_to_front($collection)
     </div>
 
     <?php include("./theme/footer.php"); ?>
+    <script>
+        let ds = document.querySelectorAll("span.date");
+        // console.log(ds);
+        ds.forEach(function(node){
+            let value = node.innerHTML;
+            console.log(dayjs(new Date()).locale('th').format('llll'));
+            // node.innerHTML =dayjs(new Date()).fromNow();
+            // node.innerHTML =dayjs(new Date()).locale('th').toString();
+        })
+    </script>
 
 </body>
 
