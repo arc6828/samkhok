@@ -68,7 +68,7 @@ function pick_to_front($collection)
             <div class="carousel-inner">
                 <?php foreach (pick_to_front($data->channel->item) as $index => $item) { ?>
                     <div class="carousel-item <?= ($index == 0 ? "active" : "") ?>">
-                        <img src="<?= $item->image_url ?>" style="height : 500px; object-fit:cover;" class="d-block w-100" alt="...">
+                        <img loading="lazy" src="<?= $item->image_url ?>" style="height : 500px; object-fit:cover;" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-xl-block d-lg-block d-md-block ">
                             <h3>
                                 <span style="background-color: black; opacity: 0.7; color : white;">
@@ -109,7 +109,7 @@ function pick_to_front($collection)
                                         <div class="post-entry d-lg-flex">
                                             <div class="me-lg-5 thumbnail mb-4 mb-lg-0">
                                                 <a target="_blank" href="<?= $item->link ?>">
-                                                    <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="width:100%;  object-fit:cover;" />
+                                                    <img loading="lazy" src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="width:100%;  object-fit:cover;" />
                                                 </a>
                                             </div>
                                             <div class="content align-self-center">
@@ -132,7 +132,7 @@ function pick_to_front($collection)
                                                 <p><?= mb_substr($item->first_paragraph, 0, 140) ?> ...</p>
                                                 <a href="#" class="post-author d-flex align-items-center">
                                                     <div class="author-pic">
-                                                        <img src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>" data-pagespeed-url-hash="1813383360" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+                                                        <img loading="lazy" src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>" data-pagespeed-url-hash="1813383360" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
                                                     </div>
                                                     <div class="text">
                                                         <strong><?= $item->creator ?></strong>
@@ -167,7 +167,7 @@ function pick_to_front($collection)
                             <div class="post-entry d-block small-post-entry-v">
                                 <div class="thumbnail">
                                     <a target="_blank" href="<?= $item->link ?>">
-                                        <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="width:100%; height: 200px; object-fit:cover;" />
+                                        <img loading="lazy" src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="width:100%; height: 200px; object-fit:cover;" />
                                     </a>
                                 </div>
                                 <div class="content">
@@ -188,7 +188,7 @@ function pick_to_front($collection)
                                     <p><?= mb_substr($item->first_paragraph, 0, 140) ?> ...</p>
                                     <a href="#" class="post-author d-flex align-items-center">
                                         <div class="author-pic">
-                                            <img src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>" />
+                                            <img loading="lazy" src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>" />
                                         </div>
                                         <div class="text">
                                             <strong><?= $item->creator ?></strong>
@@ -222,7 +222,7 @@ function pick_to_front($collection)
                             <div class="post-entry d-block small-post-entry-v">
                                 <div class="thumbnail">
                                     <a target="_blank" href="<?= $item->link ?>">
-                                        <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="width:100%; height: 250px; object-fit:cover;" />
+                                        <img loading="lazy" src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="width:100%; height: 250px; object-fit:cover;" />
                                     </a>
                                 </div>
                                 <div class="content">
@@ -247,7 +247,7 @@ function pick_to_front($collection)
                                     <p><?= mb_substr($item->first_paragraph, 0, 140) ?> ...</p>
                                     <a href="#" class="post-author d-flex align-items-center">
                                         <div class="author-pic">
-                                            <img src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>">
+                                            <img loading="lazy" src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>">
                                         </div>
                                         <div class="text">
                                             <strong><?= $item->creator ?></strong>
@@ -276,7 +276,7 @@ function pick_to_front($collection)
                                 <div class="col-lg-12">
                                     <div class="post-entry d-md-flex xsmall-horizontal mb-5">
                                         <div class="me-md-3 thumbnail mb-3 mb-md-0">
-                                            <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid">
+                                            <img loading="lazy" src="<?= $item->image_url ?>" alt="Image" class="img-fluid">
                                         </div>
                                         <div class="content">
                                             <div class="post-meta mb-1">
@@ -297,7 +297,7 @@ function pick_to_front($collection)
                                             </h2>
                                             <a href="#" class="post-author d-flex align-items-center">
                                                 <div class="author-pic">
-                                                    <img src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>">
+                                                    <img loading="lazy" src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>">
                                                 </div>
                                                 <div class="text">
                                                     <strong><?= $item->creator ?></strong>
@@ -326,7 +326,7 @@ function pick_to_front($collection)
                                 <div class="col-lg-12">
                                     <div class="post-entry d-md-flex xsmall-horizontal mb-5">
                                         <div class="me-md-3 thumbnail mb-3 mb-md-0">
-                                            <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid">
+                                            <img loading="lazy" src="<?= $item->image_url ?>" alt="Image" class="img-fluid">
                                         </div>
                                         <div class="content">
                                             <div class="post-meta mb-1">
@@ -347,7 +347,7 @@ function pick_to_front($collection)
                                             </h2>
                                             <a href="#" class="post-author d-flex align-items-center">
                                                 <div class="author-pic">
-                                                    <img src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>">
+                                                    <img loading="lazy" src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>">
                                                 </div>
                                                 <div class="text">
                                                     <strong><?= $item->creator ?></strong>
