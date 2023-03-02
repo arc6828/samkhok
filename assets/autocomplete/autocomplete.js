@@ -42,12 +42,13 @@ function autocomplete(inp, arr) {
 
         // PREFIX
         let prefix_length = 7;
-        if (index_found > prefix_length) {
-          b.innerHTML +=
-            "... " + arr[i][content_key].substr(index_found - prefix_length, prefix_length) + "";
-        } else {
-          b.innerHTML += arr[i][content_key].substr(0, index_found) + "";
-        }
+        let subfix_length = 14;
+        // if (index_found > prefix_length) {
+        //   b.innerHTML +=
+        //     "... " + arr[i][content_key].substr(index_found - prefix_length, prefix_length) + "";
+        // } else {
+        //   b.innerHTML += arr[i][content_key].substr(0, index_found) + "";
+        // }
 
         /*make the matching letters bold:*/
         b.innerHTML +=
@@ -56,8 +57,8 @@ function autocomplete(inp, arr) {
           "</strong>";
 
         //SUBFIX
-        b.innerHTML += arr[i][content_key].substr(index_found + val.length, prefix_length) + " ...";
-        b.innerHTML += "<br><i class='autocomplete-title'>"+arr[i]["title"].substr(0, prefix_length*4) + " ... </i>";
+        b.innerHTML += arr[i][content_key].substr(index_found + val.length, subfix_length) + " ...";
+        b.innerHTML += "<br><i class='autocomplete-title'>"+arr[i]["title"].substr(0, subfix_length*3) + " ... </i>";
 
 
 

@@ -11,14 +11,14 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
 
 <?php 
 $profiles = [
-    (object)[ "image" => "sitang.jpg" , "name" => "อาจารย์วิศรุต ขวัญคุ้ม" , "position" => "หัวหน้าโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "jirayu.jpg" , "name" => "ผู้ช่วยศาสตราจารย์อิงอร วงษ์ศรีรักษา" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "chavalit.jpg" , "name" => "ผู้ช่วยศาสตราจารย์ไพรินทร์ มีศรี" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "chavalit.jpg" , "name" => "ผู้ช่วยศาสตราจารย์กมลมาศ วงษ์ใหญ่" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "chavalit.jpg" , "name" => "ดร.ดาวรถา วีระพันธ์" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "chavalit.jpg" , "name" => "อาจารย์ณัฐรดี อนุพงค์" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "chavalit.jpg" , "name" => "อาจารย์ชวลิต โควีระวงศ์" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
-    (object)[ "image" => "chavalit.jpg" , "name" => "อาจารย์ปัณณรัตน์ วงศ์พัฒนานิภาส" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
+    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/wisrut.jpg" , "name" => "อาจารย์วิศรุต ขวัญคุ้ม" , "position" => "หัวหน้าโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
+    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/ing_orn.jpg" , "name" => "ผู้ช่วยศาสตราจารย์อิงอร วงษ์ศรีรักษา" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
+    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/phairin.jpg" , "name" => "ผู้ช่วยศาสตราจารย์ไพรินทร์ มีศรี" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
+    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/kamolmas.jpg" , "name" => "ผู้ช่วยศาสตราจารย์กมลมาศ วงษ์ใหญ่" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
+    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/daorathar.jpg" , "name" => "ดร.ดาวรถา วีระพันธ์" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
+    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/natradee.jpg" , "name" => "อาจารย์ณัฐรดี อนุพงค์" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
+    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/chavalit.jpg" , "name" => "อาจารย์ชวลิต โควีระวงศ์" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
+    (object)[ "image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/pannarat.jpg" , "name" => "อาจารย์ปัณณรัตน์ วงศ์พัฒนานิภาส" , "position" => "ผู้ช่วยโครงการวิจัย" , "organization" => "หลักสูตรนวัตกรรมดิจิทัลและวิศวกรรมซอฟต์แวร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"  ],
 ];
 ?>
 <!DOCTYPE html>
@@ -75,7 +75,7 @@ $profiles = [
                         <!-- Profile Card -->
                         <div class="profile-card ">
                             <div class="card shadow-sm border-soft">
-                                <img src="<?=$item->image?>" class="card-img-top" alt="..." style="height : 400px; object-fit:cover;">
+                                <img src="<?=$item->image?>" class="card-img-top" alt="..." style="height : 600px; object-fit:cover;">
 
                                 <div class="card-body">
                                     <h5 class="card-title"><?=$item->name?></h5>

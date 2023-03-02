@@ -18,6 +18,29 @@ $author_images = [
     "Sitthi Sitthipol" => "https://miro.medium.com/fit/c/176/176/0*AviJaK_gmEBZzdKR",
 ];
 
+function pick_to_front($collection)
+{
+    // // //FIND INDEX OF TARGET ELEMENT WITH KEYWORD
+    // $index = 
+    // //SPLICE
+    // array_splice($collection,$index,1);
+
+    // //TO FRONT
+    // array_unshift($arr , 'item1');
+
+
+    // $a = array(3, 2, 5, 6, 1);
+
+    usort($collection, function ($a, $b) {
+        if (str_contains($a->title, 'ภูมิปัญญาท้องถิ่นที่น่าสนใจของ')) {
+            return -1;
+        } else {
+            return 1;
+        }
+        // return ($a < $b) ? -1 : 1;
+    });
+    return $collection;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,13 +54,50 @@ $author_images = [
 
     <?php include("./theme/nav.php"); ?>
 
+    <div class="">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <?php foreach (pick_to_front($data->channel->item) as $index => $item) { ?>
+                    <?php if ($index == 0) { ?>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide <?= $index + 1 ?>"></button>
+                    <?php } else { ?>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?= $index ?>" aria-label="Slide <?= $index + 1 ?>"></button>
+                    <?php } ?>
+                <?php } ?>
+            </div>
+            <div class="carousel-inner">
+                <?php foreach (pick_to_front($data->channel->item) as $index => $item) { ?>
+                    <div class="carousel-item <?= ($index == 0 ? "active" : "") ?>">
+                        <img src="<?= $item->image_url ?>" style="height : 500px; object-fit:cover;" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-xl-block d-lg-block d-md-block ">
+                            <h3>
+                                <span style="background-color: black; opacity: 0.7; color : white;">
+                                    <?= $item->title ?>
+                                </span>
+                            </h3>
+                            <label style="background-color: black; opacity: 0.7; color : white;"><?= mb_substr($item->first_paragraph, 0, 100) ?> ...</label>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
     <div class="content">
+
         <!--  trending  -->
         <div class="section pt-5 pb-0">
             <div class="container">
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-7 text-center">
-                        <h2 class="heading">Trending</h2>
+                        <h2 class="heading">บทความล่าสุด</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -49,18 +109,18 @@ $author_images = [
                                         <div class="post-entry d-lg-flex">
                                             <div class="me-lg-5 thumbnail mb-4 mb-lg-0">
                                                 <a target="_blank" href="<?= $item->link ?>">
-                                                    <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid"  style="width:100%;  object-fit:cover;"/>
+                                                    <img src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="width:100%;  object-fit:cover;" />
                                                 </a>
                                             </div>
                                             <div class="content align-self-center">
                                                 <div class="post-meta mb-3">
                                                     <?php if (isset($item->category)) { ?>
                                                         <?php if (is_array($item->category)) { ?>
-                                                            <?php foreach ($item->category as $c) { ?>
-                                                                <a href="#" class="category"><?= $c ?></a>
+                                                            <?php foreach (preg_grep("/[^A-z]+/", $item->category) as $i => $c) { ?>
+                                                                <a href="category.php?q=<?= $c ?>" class="category"><?= $c ?></a> |
                                                             <?php } ?>
                                                         <?php } else { ?>
-                                                            <a href="#" class="category"><?= $item->category ?></a>
+                                                            <a href="category.php?q=<?= $item->category ?>" class="category"><?= $item->category ?></a>
                                                         <?php } ?>
                                                     <?php } ?>
                                                     &mdash;
@@ -114,11 +174,11 @@ $author_images = [
                                     <div class="post-meta mb-1">
                                         <?php if (isset($item->category)) { ?>
                                             <?php if (is_array($item->category)) { ?>
-                                                <?php foreach ($item->category as $c) { ?>
-                                                    <a href="#" class="category"><?= $c ?></a>
+                                                <?php foreach (preg_grep("/[^A-z]+/", $item->category) as $c) { ?>
+                                                    <a href="category.php?q=<?= $c ?>" class="category"><?= $c ?></a> |
                                                 <?php } ?>
                                             <?php } else { ?>
-                                                <a href="#" class="category"><?= $item->category ?></a>
+                                                <a href="category.php?q=<?= $item->category ?>" class="category"><?= $item->category ?></a>
                                             <?php } ?>
                                         <?php } ?>
                                         —
@@ -147,7 +207,7 @@ $author_images = [
             <div class="container">
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-7 text-center">
-                        <h2 class="heading">Most Popular Posts</h2>
+                        <h2 class="heading">ท่องเที่ยว</h2>
                     </div>
                 </div>
             </div>
@@ -168,7 +228,16 @@ $author_images = [
                                 <div class="content">
                                     <div class="post-meta mb-1">
                                         <!-- <a href="#" class="category">Business</a> -->
-                                        <a href="#" class="category">Travel</a>
+                                        <!-- <a href="#" class="category">Travel</a> -->
+                                        <?php if (isset($item->category)) { ?>
+                                            <?php if (is_array($item->category)) { ?>
+                                                <?php foreach (preg_grep("/[^A-z]+/", $item->category) as $c) { ?>
+                                                    <a href="category.php?q=<?= $c ?>" class="category"><?= $c ?></a> |
+                                                <?php } ?>
+                                            <?php } else { ?>
+                                                <a href="category.php?q=<?= $item->category ?>" class="category"><?= $item->category ?></a>
+                                            <?php } ?>
+                                        <?php } ?>
                                         &mdash;
                                         <span class="date"><?= $item->pubDate ?></span>
                                     </div>
@@ -199,7 +268,7 @@ $author_images = [
                     <div class="col-lg-6">
                         <div class="row mb-4">
                             <div class="col-12">
-                                <h2 class="h4 fw-bold">culture</h2>
+                                <h2 class="h4 fw-bold">วัฒนธรรม</h2>
                             </div>
                         </div>
                         <div class="row justify-content-center">
@@ -213,11 +282,11 @@ $author_images = [
                                             <div class="post-meta mb-1">
                                                 <?php if (isset($item->category)) { ?>
                                                     <?php if (is_array($item->category)) { ?>
-                                                        <?php foreach ($item->category as $c) { ?>
-                                                            <a href="#" class="category"><?= $c ?></a>
+                                                        <?php foreach (preg_grep("/[^A-z]+/", $item->category) as $c) { ?>
+                                                            <a href="category.php?q=<?= $c ?>" class="category"><?= $c ?></a> |
                                                         <?php } ?>
                                                     <?php } else { ?>
-                                                        <a href="#" class="category"><?= $item->category ?></a>
+                                                        <a href="category.php?q=<?= $item->category ?>" class="category"><?= $item->category ?></a>
                                                     <?php } ?>
                                                 <?php } ?>
                                                 —
@@ -249,7 +318,7 @@ $author_images = [
                     <div class="col-lg-6">
                         <div class="row mb-4">
                             <div class="col-12">
-                                <h2 class="h4 fw-bold">thinking</h2>
+                                <h2 class="h4 fw-bold">ความเชื่อ</h2>
                             </div>
                         </div>
                         <div class="row justify-content-center">
@@ -263,11 +332,11 @@ $author_images = [
                                             <div class="post-meta mb-1">
                                                 <?php if (isset($item->category)) { ?>
                                                     <?php if (is_array($item->category)) { ?>
-                                                        <?php foreach ($item->category as $c) { ?>
-                                                            <a href="#" class="category"><?= $c ?></a>
+                                                        <?php foreach (preg_grep("/[^A-z]+/", $item->category) as $c) { ?>
+                                                            <a href="category.php?q=<?= $c ?>" class="category"><?= $c ?></a> |
                                                         <?php } ?>
                                                     <?php } else { ?>
-                                                        <a href="#" class="category"><?= $item->category ?></a>
+                                                        <a href="category.php?q=<?= $item->category ?>" class="category"><?= $item->category ?></a>
                                                     <?php } ?>
                                                 <?php } ?>
                                                 —
@@ -300,31 +369,7 @@ $author_images = [
     </div>
 
     <?php include("./theme/footer.php"); ?>
-    <script src="./assets/autocomplete/autocomplete.js"></script>
-    <script>
-        function stripHtml(html) {
-            let tmp = document.createElement("DIV");
-            tmp.innerHTML = html;
-            return tmp.textContent || tmp.innerText || "";
-        }
 
-        fetch("https://ckartisan.com/api/medium/feed/samkhok")
-            .then((data) => (data.json()))
-            .then((data) => {
-                console.log(data);
-                data = data.channel.item;
-                data = data.map(function(item) {
-                    return {
-                        "title": item.title,
-                        "content": stripHtml(item.contentEncoded).replace(/[^ก-๛0-9\s]+/g, "") ,
-                        "link": item.link,
-                    };
-                });
-                autocomplete(document.getElementById("searchbox"), data);
-            })
-        // let countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua &amp; Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia &amp; Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre &amp; Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts &amp; Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad &amp; Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks &amp; Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
-        // autocomplete(document.getElementById("searchbox"), data);
-    </script>
 </body>
 
 </html>

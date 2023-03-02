@@ -26,7 +26,7 @@
                             left: 15px;
                             color: #ccc;
                             font-size: 16px;"></span>
-                        <input type="search" class="form-control autocomplete" id="searchbox" placeholder="Search...">
+                        <input type="search" class="form-control autocomplete" id="searchbox" placeholder="ค้นหา ...">
                     </form>
                 </div>
                 <!-- hamburger -->
@@ -38,7 +38,7 @@
                             <li><a href="https://www.facebook.com/SciTechvru2018" target="_blank"><i class="bi-facebook"></i></a></li>
                             <li><a href="contact.php"><i class="bi-telephone"></i></a></li>
                         </ul>
-                        <a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block" data-toggle="collapse" data-target="#main-navbar">
+                        <a href="javascript:void(0)" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block" data-toggle="collapse" data-target="#main-navbar">
                             <span></span>
                         </a>
 
@@ -77,23 +77,23 @@
             </div>
             <ul class="js-clone-nav d-none d-lg-inline-none text-start site-menu float-end">
                 <li class="active"><a href=".">หน้าแรก</a></li>
-                <!-- {{-- <li class="has-children">
-                        <a href="categories.html">Categories</a>
-                        <ul class="dropdown">
-                            <li><a href="#">Travel</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li class="has-children">
-                                <a href="#">Dropdown</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Sub Menu One</a></li>
-                                    <li><a href="#">Sub Menu Two</a></li>
-                                    <li><a href="#">Sub Menu Three</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li> --}} -->
+                <li class="has-children">
+                    <!-- <span class="arrow-collapse collapsed" data-bs-toggle="collapse" data-bs-target="#collapseItem0" aria-expanded="false"></span> -->
+                    <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">หมวดหมู่บทความ</a>
+                    <ul class="collapse" id="collapseExample">
+                        <li><a href="category.php?q=ท่องเที่ยว">ท่องเที่ยว</a></li>
+                        <li><a href="category.php?q=วัฒนธรรม">วัฒนธรรม</a></li>
+                        <li><a href="category.php?q=ความเชื่อ">ความเชื่อ</a></li>
+                        <li class="has-children">
+                            <a href="#">Dropdown</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub Menu One</a></li>
+                                <li><a href="#">Sub Menu Two</a></li>
+                                <li><a href="#">Sub Menu Three</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li><a href="about.php">เกี่ยวกับโครงการ</a></li>
                 <li><a href="gallery.php">คลังภาพกิจกรรม</a></li>
                 <li><a href="contact.php">ติดต่อ</a></li>
