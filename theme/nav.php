@@ -84,14 +84,14 @@
                         <li><a href="category.php?q=ท่องเที่ยว">ท่องเที่ยว</a></li>
                         <li><a href="category.php?q=วัฒนธรรม">วัฒนธรรม</a></li>
                         <li><a href="category.php?q=ความเชื่อ">ความเชื่อ</a></li>
-                        <li class="has-children">
+                        <!-- <li class="has-children">
                             <a href="#">Dropdown</a>
                             <ul class="dropdown">
                                 <li><a href="#">Sub Menu One</a></li>
                                 <li><a href="#">Sub Menu Two</a></li>
                                 <li><a href="#">Sub Menu Three</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 <li><a href="about.php">เกี่ยวกับโครงการ</a></li>
