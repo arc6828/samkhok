@@ -53,8 +53,13 @@
     .card-header,
     th,
     li,
-    a:not(.logo) {
+    a:not(.logo),
+    .prompt {
         font-family: "Prompt", "Open Sans script=all rev=1" !important;
         font-weight: 500 !important;
+    }
+
+    .border-soft {
+        border-color: #F3F7FA !important;
     }
 </style>

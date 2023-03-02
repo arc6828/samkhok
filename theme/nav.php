@@ -34,9 +34,9 @@
                     <div class="d-flex">
                         <ul class="list-unstyled social me-auto">
 
-                            <li><a href="#"><i class="bi-youtube"></i></a></li>
-                            <li><a href="#"><i class="bi-facebook"></i></a></li>
-                            <li><a href="#"><i class="bi-telephone"></i></a></li>
+                            <li><a href="https://www.youtube.com/@scitechvruofficail1218" target="_blank"><i class="bi-youtube"></i></a></li>
+                            <li><a href="https://www.facebook.com/SciTechvru2018" target="_blank"><i class="bi-facebook"></i></a></li>
+                            <li><a href="contact.php"><i class="bi-telephone"></i></a></li>
                         </ul>
                         <a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block" data-toggle="collapse" data-target="#main-navbar">
                             <span></span>
@@ -94,8 +94,9 @@
                             </li>
                         </ul>
                     </li> --}} -->
-                <li><a href="#">เกี่ยวกับโครงการ</a></li>
-                <li><a href="#">ติดต่อ</a></li>
+                <li><a href="about.php">เกี่ยวกับโครงการ</a></li>
+                <li><a href="gallery.php">คลังภาพกิจกรรม</a></li>
+                <li><a href="contact.php">ติดต่อ</a></li>
             </ul>
         </div>
     </div>
