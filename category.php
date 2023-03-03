@@ -72,7 +72,7 @@ switch ($_GET['q']) {
                                     <span class="date"><?= $item->pubDate ?></span>
                                 </div>
                                 <h2 class="heading">
-                                    <a href="<?= $item->link ?>"><?= $item->title ?></a>
+                                    <a href="<?= $item->link ?>" target="_blank"><?= $item->title ?></a>
                                 </h2>
                                 <p><?= mb_substr($item->first_paragraph, 0, 140) ?> ...</p>
                                 <a href="#" class="post-author d-flex align-items-center">
