@@ -132,7 +132,7 @@ function pick_to_front($collection)
                                                 <p><?= mb_substr($item->first_paragraph, 0, 140) ?> ...</p>
                                                 <a href="#" class="post-author d-flex align-items-center">
                                                     <div class="author-pic">
-                                                        <img loading="lazy" src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>" data-pagespeed-url-hash="1813383360" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+                                                        <img loading="lazy" src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>" />
                                                     </div>
                                                     <div class="text">
                                                         <strong><?= $item->creator ?></strong>
@@ -369,16 +369,6 @@ function pick_to_front($collection)
     </div>
 
     <?php include("./theme/footer.php"); ?>
-    <script>
-        let ds = document.querySelectorAll("span.date");
-        // console.log(ds);
-        ds.forEach(function(node){
-            let value = node.innerHTML;
-            console.log(dayjs(new Date()).locale('th').format('llll'));
-            // node.innerHTML =dayjs(new Date()).fromNow();
-            // node.innerHTML =dayjs(new Date()).locale('th').toString();
-        })
-    </script>
 
 </body>
 

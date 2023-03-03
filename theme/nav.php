@@ -77,7 +77,7 @@
             </div>
             <ul class="js-clone-nav d-none d-lg-inline-none text-start site-menu float-end">
                 <li class="active"><a href=".">หน้าแรก</a></li>
-                <li class="has-children">
+                <li class="">
                     <!-- <span class="arrow-collapse collapsed" data-bs-toggle="collapse" data-bs-target="#collapseItem0" aria-expanded="false"></span> -->
                     <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">หมวดหมู่บทความ</a>
                     <ul class="collapse" id="collapseExample">
