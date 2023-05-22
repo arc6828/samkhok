@@ -62,4 +62,23 @@
     .border-soft {
         border-color: #F3F7FA !important;
     }
+    
+    .col-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    @media (min-width: 576px) {
+        .col-sm-6 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .col-lg-3 {
+            flex: 0 0 auto;
+            width: 25%;
+        }
+    }
 </style>
