@@ -31,6 +31,22 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                 </div>
                 <div class="row pb-4">
                     <div class="col-lg-4 text-center">
+                        <img class="img-thumbnail" src="https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/wisrut.jpg" width="100%" style="max-width : 150px;">
+                    </div>
+                    <div class="col-lg-8 py-4">
+                        <h5>อ.วิศรุต ขวัญคุ้ม</h5>
+                        <p class="prompt">
+                            หัวหน้าโครงการวิจัย
+                            <br>โครงการพัฒนาแฟลตฟอร์มการจัดการเรียนรู้สาหรับสถานศึกษาวิวัฒน์ชุมชน
+                            <br>มือถือ : 08-6202-0656
+                            <br>Email : wisrut@vru.ac.th
+                            <br>Website คณะ : <a href="http://sci.vru.ac.th">http://sci.vru.ac.th</a>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row pb-4 mt-4">
+                    <div class="col-lg-4 text-center">
                         <img class="" src="assets/img/logo.png" width="100%" style="max-width : 200px;">
                     </div>
                     <div class="col-lg-8 ">

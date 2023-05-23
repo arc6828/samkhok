@@ -26,6 +26,9 @@ switch ($_GET['q']) {
     case "ความคิด":
         $data = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/thinking"));
         break;
+    case "สามโคก":
+        $data = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/samkhok"));
+        break;
     default:
         $data = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok"));
 }

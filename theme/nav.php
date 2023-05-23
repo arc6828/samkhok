@@ -84,6 +84,7 @@
                         <li><a href="category.php?q=ท่องเที่ยว">ท่องเที่ยว</a></li>
                         <li><a href="category.php?q=วัฒนธรรม">วัฒนธรรม</a></li>
                         <li><a href="category.php?q=ความเชื่อ">ความเชื่อ</a></li>
+                        <li><a href="category.php?q=สามโคก">บทความพิเศษ</a></li>
                         <!-- <li class="has-children">
                             <a href="#">Dropdown</a>
                             <ul class="dropdown">
