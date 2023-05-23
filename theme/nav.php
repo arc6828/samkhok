@@ -96,7 +96,8 @@
                 </li>
                 <li><a href="about.php">เกี่ยวกับโครงการ</a></li>
                 <li><a href="gallery.php">คลังภาพกิจกรรม</a></li>
-                <li><a href="contact.php">ติดต่อ</a></li>
+                <li><a href="contact.php">ติดต่อ</a></li>                
+                <li><a href="https://forms.gle/socq5mvoTc3JKzwj7">สมัครเป็นนักเขียน</a></li>
             </ul>
         </div>
     </div>
