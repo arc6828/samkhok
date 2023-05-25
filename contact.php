@@ -47,7 +47,7 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                 </div>
                 <div class="row pb-4 mt-4">
                     <div class="col-lg-4 text-center">
-                        <img class="" src="assets/img/logo.png" width="100%" style="max-width : 200px;">
+                        <img class="" src="assets/img/logo.png" width="100%" style="max-width : 150px;">
                     </div>
                     <div class="col-lg-8 ">
                         <h5>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์</h5>
