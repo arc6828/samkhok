@@ -62,6 +62,48 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                     </div>
 
                 </div>
+                <div class="row pb-4 mt-4">
+                    <div class="col-lg-4 text-center">
+                        <img class="rounded-circle" src="http://dise.vru.ac.th/images/dise-logo.jpg" width="100%" style="max-width : 125px;">
+                    </div>
+                    <div class="col-lg-8 ">
+                        <h5>หลักสูตรนวัตกรรมดิจิทัลและวิศวกรรมซอฟต์แวร์</h5>
+                        <p class="prompt">
+                            ที่อยู่: เลขที่ 1 หมู่ 20 ถนนพหลโยธิน กม. 48 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 13180
+                            <br>โทรศัพท์ : 0-2529-3850 , ภายในเบอร์ : 161
+                            <br>Email : sciencetech@vru.ac.th
+                            <br>Website หลักสูตร : <a href="http://dise.vru.ac.th">http://dise.vru.ac.th</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row pb-4 mt-4">
+                    <div class="col-lg-4 text-center">
+                        <img class="rounded-circle" src="http://comit.vru.ac.th/assets/images/favicon/apple-touch-icon.png" width="100%" style="max-width : 150px;">
+                    </div>
+                    <div class="col-lg-8 ">
+                        <h5>หลักสูตรเทคโนโลยีสารสนเทศ</h5>
+                        <p class="prompt">
+                            ที่อยู่: เลขที่ 1 หมู่ 20 ถนนพหลโยธิน กม. 48 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 13180
+                            <br>โทรศัพท์ : 0-2529-3850 , ภายในเบอร์ : 161
+                            <br>Email : sciencetech@vru.ac.th
+                            <br>Website หลักสูตร : <a href="http://comit.vru.ac.th">http://comit.vru.ac.th</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row pb-4 mt-4">
+                    <div class="col-lg-4 text-center">
+                        <img class="rounded-circle" src="http://cs.vru.ac.th/images/css.png" width="100%" style="max-width : 80px;">
+                    </div>
+                    <div class="col-lg-8 ">
+                        <h5>หลักสูตรวิทยาการคอมพิวเตอร์</h5>
+                        <p class="prompt">
+                            ที่อยู่: เลขที่ 1 หมู่ 20 ถนนพหลโยธิน กม. 48 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 13180
+                            <br>โทรศัพท์ : 0-2529-3850 , ภายในเบอร์ : 161
+                            <br>Email : sciencetech@vru.ac.th
+                            <br>Website หลักสูตร : <a href="http://cs.vru.ac.th">http://cs.vru.ac.th</a>
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-12 p-5">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d967.2620312334692!2d100.61375408301579!3d14.133267486650517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e27f5733db0bbd%3A0x729599c7dd54f2da!2z4LiE4LiT4Liw4Lin4Li04LiX4Lii4Liy4Lio4Liy4Liq4LiV4Lij4LmM4LmB4Lil4Liw4LmA4LiX4LiE4LmC4LiZ4LmC4Lil4Lii4Li1IOC4oeC4q-C4suC4p-C4tOC4l-C4ouC4suC4peC4seC4ouC4o-C4suC4iuC4oOC4seC4j-C4p-C5hOC4peC4ouC4reC4peC4h-C4geC4o-C4k-C5jCDguYPguJnguJ7guKPguLDguJrguKPguKHguKPguLLguIrguLnguJvguJbguLHguKHguKDguYw!5e0!3m2!1sth!2sth!4v1677742522201!5m2!1sth!2sth" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

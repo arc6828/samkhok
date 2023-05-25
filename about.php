@@ -71,23 +71,24 @@ $profiles = [
                         <h2>ทีมวิจัยและพัฒนา</h2>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-4 gy-4 ">
                     <?php foreach ($profiles as $item) { ?>
                         <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                             <!-- Profile Card -->
-                            <div class="profile-card" style="margin-bottom: 20px;">
-                                <div class="card shadow-sm border-soft">
+                            <!-- <div class="" >
+                                
+                            </div> -->
+                            <div class="card profile-card shadow-sm border-soft h-100">
                                     <!-- <img src="<?= $item->image ?>" class="card-img-top" alt="..." style="height : 600px; object-fit:cover;" > -->
                                     <img src="<?= $item->image ?>" class="card-img-top" alt="..." style="height : 400px; object-fit:cover;">
 
                                     <div class="card-body">
                                         <h6 class="card-title" style="color:black;"><?= $item->name ?></h6>
-                                        <h7 class="card-subtitle text-gray"><?= $item->position ?></h7>
-                                        <p class="card-text my-2"><?= $item->organization ?></p>
+                                        <h7 class="card-subtitle text-gray prompt"><?= $item->position ?></h7>
+                                        <p class="card-text my-2"><?= str_replace(" ","<br/>",$item->organization) ?></p>
 
                                     </div>
                                 </div>
-                            </div>
                             <!-- End of Profile Card -->
                         </div>
                     <?php } ?>

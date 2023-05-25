@@ -62,7 +62,7 @@
     .border-soft {
         border-color: #F3F7FA !important;
     }
-    
+
     .col-6 {
         flex: 0 0 auto;
         width: 50%;
@@ -80,5 +80,21 @@
             flex: 0 0 auto;
             width: 25%;
         }
+    }
+
+    .row-cols-1>* {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    @media (min-width: 992px) {
+        .row-cols-lg-2>* {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+    }
+
+    .g-4,.gy-4 {
+        --bs-gutter-y: 1.5rem;
     }
 </style>
