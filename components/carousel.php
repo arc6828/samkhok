@@ -11,7 +11,9 @@
     <div class="carousel-inner">
         <?php foreach ($data->channel->item as $index => $item) { ?>
             <div class="carousel-item <?= ($index == 0 ? "active" : "") ?>">
+                <a href="<?= $item->link ?>" target="_blank" >
                 <img loading="lazy" src="<?= $item->image_url ?>" style="height : 500px; object-fit:cover;" class="d-block w-100" alt="...">
+                </a>
                 <div class="carousel-caption d-xl-block d-lg-block d-md-block ">
                     <h3>
                         <span style="background-color: black; opacity: 0.7; color : white;">
