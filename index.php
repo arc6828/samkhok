@@ -13,6 +13,8 @@ $travel = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/s
 $culture = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/culture"));
 $thinking = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/thinking"));
 $samkhok = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/samkhok"));
+$samkhok = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/samkhok"));
+$vip = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/vip"));
 
 $author_images = [
     "_KaoDhana" => "https://miro.medium.com/fit/c/88/88/1*25ZIxGT-YFj7cZVib4dVKA@2x.jpeg",
