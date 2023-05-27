@@ -25,7 +25,7 @@
                             —
                             <span class="date"><?= $item->pubDate ?></span>
                         </div>
-                        <h2 class="heading">
+                        <h2 class="heading" >
                             <a target="_blank" href="<?= $item->link ?>"><?= $item->title ?></a>
                         </h2>
                         <a href="#" class="post-author d-flex align-items-center">
@@ -41,10 +41,13 @@
                 </div>
             </div>
             <?php
-            if ($index >= 3) {
+            if ($index >= 1) {
                 break;
             }
             ?>
         <?php } ?>
+        <div>
+            <a href="category.php?q=<?=$list_title?>">ดูบทความทั้งหมดใน <?=$list_title?></a>
+        </div>
     </div>
 </div>

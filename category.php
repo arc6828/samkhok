@@ -7,12 +7,9 @@ $keywords = "สามโคก, ปทุมธานี, แม่น้ำเ
 $url = "https://www.samkhok.org/contact.php";
 $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
 
-$author_images = [
-    "_KaoDhana" => "https://miro.medium.com/fit/c/88/88/1*25ZIxGT-YFj7cZVib4dVKA@2x.jpeg",
-    "Sitthi Sitthipol" => "https://miro.medium.com/fit/c/176/176/0*AviJaK_gmEBZzdKR",
-    "The Collector" => "https://cdn-images-1.medium.com/v2/resize:fill:36:36/0*KC4C9CrRgdxkOGsI",
-];
 ?>
+
+<?php include("./components/author-images.php"); ?>
 
 <?php
 $data = [];
@@ -29,6 +26,12 @@ switch ($_GET['q']) {
         break;
     case "สามโคก":
         $data = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/samkhok"));
+        break;
+    case "บุคคลสำคัญ":
+        $data = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/vip"));
+        break;
+    case "การพัฒนาแพลตฟอร์ม":
+        $data = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/general"));
         break;
     default:
         $data = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok"));

@@ -13,14 +13,10 @@ $travel = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/s
 $culture = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/culture"));
 $thinking = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/thinking"));
 $samkhok = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/samkhok"));
-$samkhok = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/samkhok"));
 $vip = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/vip"));
+$general = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/general"));
 
-$author_images = [
-    "_KaoDhana" => "https://miro.medium.com/fit/c/88/88/1*25ZIxGT-YFj7cZVib4dVKA@2x.jpeg",
-    "Sitthi Sitthipol" => "https://miro.medium.com/fit/c/176/176/0*AviJaK_gmEBZzdKR",
-    "The Collector" => "https://cdn-images-1.medium.com/v2/resize:fill:36:36/0*KC4C9CrRgdxkOGsI",
-];
+
 
 function pick_to_front($collection)
 {
@@ -35,6 +31,9 @@ function pick_to_front($collection)
     return $collection;
 }
 ?>
+
+<?php include("./components/author-images.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,6 +94,20 @@ function pick_to_front($collection)
                         <?php
                         $list_title = "ความเชื่อ";
                         $data = $thinking;
+                        ?>
+                        <?php include("./components/vertical-list.php"); ?>
+                    </div>
+                    <div class="col">
+                        <?php
+                        $list_title = "บุคคลสำคัญ";
+                        $data = $vip;
+                        ?>
+                        <?php include("./components/vertical-list.php"); ?>
+                    </div>
+                    <div class="col">
+                        <?php
+                        $list_title = "การพัฒนาแพลตฟอร์ม";
+                        $data = $general;
                         ?>
                         <?php include("./components/vertical-list.php"); ?>
                     </div>

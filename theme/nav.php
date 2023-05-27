@@ -81,10 +81,12 @@
                     <!-- <span class="arrow-collapse collapsed" data-bs-toggle="collapse" data-bs-target="#collapseItem0" aria-expanded="false"></span> -->
                     <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">หมวดหมู่บทความ</a>
                     <ul class="collapse" id="collapseExample">
+                        <li><a href="category.php?q=สามโคก">บทความพิเศษ</a></li>
                         <li><a href="category.php?q=ท่องเที่ยว">ท่องเที่ยว</a></li>
                         <li><a href="category.php?q=วัฒนธรรม">วัฒนธรรม</a></li>
                         <li><a href="category.php?q=ความเชื่อ">ความเชื่อ</a></li>
-                        <li><a href="category.php?q=สามโคก">บทความพิเศษ</a></li>
+                        <li><a href="category.php?q=บุคคลสำคัญ">บุคคลสำคัญ</a></li>
+                        <li><a href="category.php?q=การพัฒนาแพลตฟอร์ม">การพัฒนาแพลตฟอร์ม</a></li>
                         <!-- <li class="has-children">
                             <a href="#">Dropdown</a>
                             <ul class="dropdown">

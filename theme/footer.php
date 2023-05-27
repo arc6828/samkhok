@@ -26,6 +26,18 @@
     <div class="container">
         <div class="row justify-content-center copyright">
             <div class="col-lg-7 text-center">
+                <div class="" style="display: flex; justify-content: center;">
+                    <div class="" style="margin: 10px;">
+                        <a href2="https://geo.itunes.apple.com/us/app/whoscored-football-app/id940048063?mt=8">
+                            <img alt="app store" src="https://d2zywfiolv4f83.cloudfront.net/img/appstore_en.png" width="135" height="40" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="" style="margin: 10px;">
+                        <a href="https://play.google.com/store/apps/details?id=org.samkhok">
+                            <img loading="lazy" alt="Get it on Google Play" src="https://d2zywfiolv4f83.cloudfront.net/img/googleplaystore_en.png" width="135" height="40">
+                        </a>
+                    </div>
+                </div>
                 <div class="widget">
                     <ul class="social list-unstyled">
                         <!-- {{-- <li><a href="#"><span class="fa fa-home"></span></a></li>
@@ -36,7 +48,7 @@
                     </ul>
                 </div>
                 <div class="widget">
-                    <p>Copyright ©
+                    <p class="prompt">Copyright ©
                         <script>
                             document.write(new Date().getFullYear());
                         </script> All rights reserved
