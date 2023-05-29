@@ -34,7 +34,7 @@
                     <div class="d-flex">
                         <ul class="list-unstyled social me-auto">
 
-                            <li><a href="https://www.youtube.com/@wisrutkwankhoom1424" target="_blank"><i class="bi-youtube"></i></a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLQuu6Zfpc1btKwOSY3VmeZ6RQsJQ9Xulu" target="_blank"><i class="bi-youtube"></i></a></li>
                             <li><a href="https://www.facebook.com/SciTechvru2018" target="_blank"><i class="bi-facebook"></i></a></li>
                             <li><a href="contact.php"><i class="bi-telephone"></i></a></li>
                         </ul>
