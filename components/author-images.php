@@ -4,6 +4,7 @@ $author_images = [
     "Sitthi Sitthipol" => "https://miro.medium.com/fit/c/176/176/0*AviJaK_gmEBZzdKR",
     "The Collector" => "https://cdn-images-1.medium.com/v2/resize:fill:36:36/0*KC4C9CrRgdxkOGsI",
     "Chavalit Koweerawong" => "https://cdn-images-1.medium.com/v2/resize:fill:36:36/1*1XAKBpvxYgdKXjv5YiLe6A.jpeg",
+    "Ing_orn Wongsriruksa" => "https://cdn-images-1.medium.com/v2/resize:fill:36:36/0*uGAQ86eQj9rgwSOR",
 ];
 
 
