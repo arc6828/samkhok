@@ -7,7 +7,8 @@ $keywords = "สามโคก, ปทุมธานี, แม่น้ำเ
 $url = "https://www.samkhok.org/gallery.php";
 $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
 
-$images = ['9.JPG', 'DSC09022.JPG', 'IMG_20230108_172354.jpg', 'IMG_4096.JPG', 'IMG_4345.jpeg', 'IMG_4948.JPG', 'IMG_6400.JPG', 'IMG_6422.JPG', 'IMG_6580.JPG', 'IMG_6743.JPG', 'IMG_6784.JPG', 'IMG_7594.jpeg', 'IMG_7618.jpeg'];
+$path = "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/gallery/";
+$images = ['9.JPG', 'DSC09022.JPG', 'IMG_20230108_172354.jpg', 'IMG_4096.JPG', 'IMG_4345.jpeg', 'IMG_4948.JPG', 'IMG_6400.JPG', 'IMG_6422.JPG', 'IMG_6580.JPG', 'IMG_6743.JPG', 'IMG_6784.JPG',  'IMG_7618.jpeg'];
 
 ?>
 <!DOCTYPE html>
@@ -32,16 +33,16 @@ $images = ['9.JPG', 'DSC09022.JPG', 'IMG_20230108_172354.jpg', 'IMG_4096.JPG', '
                     </div>
                 </div>
                 <div class="row">
-                    <?php foreach($images as $item){ ?>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex">
-                        <!-- Card -->
-                        <a class=" p-4 " href="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_1.jpg" target="_blank">
-                            <!-- Body -->
-                            <div class="">
-                                <img src="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_1.jpg" class="img-thumbnail" alt="Related news image 1" height="200">
-                            </div>
-                        </a>
-                    </div>
+                    <?php foreach ($images as $item) { ?>
+                        <div class="col-12 col-md-6 col-lg-4 ">
+                            <!-- Card -->
+                            <a class=" p-4 " href="<?= $path . $item ?>" target="_blank">
+                                <!-- Body -->
+                                <div class="">
+                                    <img src="<?= $path . $item ?>" class="img-thumbnail " alt="Related news image 1" style="width:100%; height:250px; object-fit:cover;">
+                                </div>
+                            </a>
+                        </div>
                     <?php } ?>
                 </div>
             </div>
