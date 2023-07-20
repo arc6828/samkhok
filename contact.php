@@ -47,7 +47,7 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                 </div>
                 <div class="row pb-4 mt-4">
                     <div class="col-lg-4 text-center">
-                        <img class="" src="assets/img/logo.png" width="100%" style="max-width : 150px;">
+                        <img class="" src="https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/logo/sci.png" width="100%" style="max-width : 150px;">
                     </div>
                     <div class="col-lg-8 ">
                         <h5>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์</h5>
@@ -64,7 +64,7 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                 </div>
                 <div class="row pb-4 mt-4">
                     <div class="col-lg-4 text-center">
-                        <img class="rounded-circle" src="http://dise.vru.ac.th/images/dise-logo.jpg" width="100%" style="max-width : 125px;">
+                        <img class="rounded-circle" src="https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/logo/dise.jpg" width="100%" style="max-width : 125px;">
                     </div>
                     <div class="col-lg-8 ">
                         <h5>หลักสูตรนวัตกรรมดิจิทัลและวิศวกรรมซอฟต์แวร์</h5>
@@ -78,7 +78,7 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                 </div>
                 <div class="row pb-4 mt-4">
                     <div class="col-lg-4 text-center">
-                        <img class="rounded-circle" src="http://comit.vru.ac.th/assets/images/favicon/apple-touch-icon.png" width="100%" style="max-width : 150px;">
+                        <img class="rounded-circle" src="https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/logo/it.png" width="100%" style="max-width : 150px;">
                     </div>
                     <div class="col-lg-8 ">
                         <h5>หลักสูตรเทคโนโลยีสารสนเทศ</h5>
@@ -92,7 +92,7 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                 </div>
                 <div class="row pb-4 mt-4">
                     <div class="col-lg-4 text-center">
-                        <img class="rounded-circle" src="http://cs.vru.ac.th/images/css.png" width="100%" style="max-width : 80px;">
+                        <img class="rounded-circle" src="https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/logo/cs.png" width="100%" style="max-width : 80px;">
                     </div>
                     <div class="col-lg-8 ">
                         <h5>หลักสูตรวิทยาการคอมพิวเตอร์</h5>
