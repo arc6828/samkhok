@@ -6,20 +6,8 @@ $description = "อำเภอสามโคก จังหวัดปทุ
 $keywords = "สามโคก, ปทุมธานี, แม่น้ำเจ้าพระยา, โบราณ, ท่องเที่ยว, ภูมิปัญญา, ประเพณี, วัตนธรรม";
 $url = "https://www.samkhok.org/about.php";
 $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
-
-?>
-
-<?php
-$profiles = [
-    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/wisrut.jpg", "name" => "อ.วิศรุต ขวัญคุ้ม", "position" => "หัวหน้าโครงการวิจัย", "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
-    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/ing_orn.jpg", "name" => "ผศ.อิงอร วงษ์ศรีรักษา", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
-    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/phairin.jpg", "name" => "ผศ.ไพรินทร์ มีศรี", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
-    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/kamolmas.jpg", "name" => "ผศ.กมลมาศ วงษ์ใหญ่", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
-    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/daorathar.jpg", "name" => "ดร.ดาวรถา วีระพันธ์", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
-    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/natradee.jpg", "name" => "อ.ณัฐรดี อนุพงค์", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
-    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/chavalit.jpg", "name" => "อ.ชวลิต โควีระวงศ์", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
-    (object)["image" => "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/pannarat.jpg", "name" => "อ.ปัณณรัตน์ วงศ์พัฒนานิภาส", "position" => "ผู้ช่วยโครงการวิจัย", "organization" => "หลักสูตรนวัตกรรมดิจิทัลและวิศวกรรมซอฟต์แวร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์"],
-];
+require_once __DIR__ . '/components/data-service.php';
+$profiles = get_researchers_data();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +34,7 @@ $profiles = [
                     <div class="col-lg-12">
 
                         <div class="text-center">
-                            <img class="img-thumbnail" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*v_-qDdjsr35MepgtUPOdvg.png" />
+                            <img class="img-thumbnail" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*v_-qDdjsr35MepgtUPOdvg.png" alt="โครงการพัฒนาแฟลตฟอร์มการจัดการเรียนรู้สามโคก" />
                         </div>
                         <div class="mt-5" style="font-size: 20px; font-weight: 300;">
                             <p class="">
@@ -74,22 +62,14 @@ $profiles = [
                 <div class="row mt-4 gy-4 ">
                     <?php foreach ($profiles as $item) { ?>
                         <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-                            <!-- Profile Card -->
-                            <!-- <div class="" >
-                                
-                            </div> -->
                             <div class="card profile-card shadow-sm border-soft h-100">
-                                    <!-- <img src="<?= $item->image ?>" class="card-img-top" alt="..." style="height : 600px; object-fit:cover;" > -->
-                                    <img src="<?= $item->image ?>" class="card-img-top" alt="..." style="height : 400px; object-fit:cover;">
-
-                                    <div class="card-body">
-                                        <h6 class="card-title" style="color:black;"><?= $item->name ?></h6>
-                                        <h7 class="card-subtitle text-gray prompt"><?= $item->position ?></h7>
-                                        <p class="card-text my-2"><?= str_replace(" ","<br/>",$item->organization) ?></p>
-
-                                    </div>
+                                <img src="<?= $item->image ?>" class="card-img-top" alt="<?= htmlspecialchars($item->name, ENT_QUOTES, 'UTF-8') ?>" style="height: 400px; object-fit:cover;">
+                                <div class="card-body">
+                                    <h6 class="card-title" style="color:black;"><?= $item->name ?></h6>
+                                    <div class="card-subtitle text-gray prompt small mb-2"><?= $item->position ?></div>
+                                    <p class="card-text my-2"><?= str_replace(" ","<br/>",$item->organization) ?></p>
                                 </div>
-                            <!-- End of Profile Card -->
+                            </div>
                         </div>
                     <?php } ?>
                 </div>
@@ -108,61 +88,22 @@ $profiles = [
                 </div>
 
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 d-flex">
-                        <!-- Card -->
-                        <a class=" card mb-4 rounded bg-image animate-up-3 " href="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_1.jpg" target="_blank">
-                            <!-- Body -->
-                            <div class="card-body z-2 my-auto text-white">
-                                <img src="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_1.jpg" class="card-img-top" alt="Related news image 1" height="200">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex">
-                        <!-- Card -->
-                        <a class=" card mb-4 rounded bg-image animate-up-3 " href="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_38.jpg" target="_blank">
-                            <!-- Body -->
-                            <div class="card-body z-2 my-auto text-white">
-                                <img src="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_38.jpg" class="card-img-top" alt="Related news image 1" height="200">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex">
-                        <!-- Card -->
-                        <a class=" card mb-4 rounded bg-image animate-up-3 " href="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_65.jpg" target="_blank">
-                            <!-- Body -->
-                            <div class="card-body z-2 my-auto text-white">
-                                <img src="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_65.jpg" class="card-img-top" alt="Related news image 1" height="200">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex">
-                        <!-- Card -->
-                        <a class=" card mb-4 rounded bg-image animate-up-3 " href="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_78.jpg" target="_blank">
-                            <!-- Body -->
-                            <div class="card-body z-2 my-auto text-white">
-                                <img src="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_78.jpg" class="card-img-top" alt="Related news image 1" height="200">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex">
-                        <!-- Card -->
-                        <a class=" card mb-4 rounded bg-image animate-up-3 " href="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_147.jpg" target="_blank">
-                            <!-- Body -->
-                            <div class="card-body z-2 my-auto text-white">
-                                <img src="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_147.jpg" class="card-img-top" alt="Related news image 1" height="200">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 d-flex">
-                        <!-- Card -->
-                        <a class=" card mb-4 rounded bg-image animate-up-3 " href="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_137.jpg" target="_blank">
-                            <!-- Body -->
-                            <div class="card-body z-2 my-auto text-white">
-                                <img src="https://thungsongflood.org/img/ground/LINE_ALBUM_Nakhon Sri _day 1_160222_220914_137.jpg" class="card-img-top" alt="Related news image 1" height="200">
-                            </div>
-                        </a>
-                    </div>
-
+                    <?php
+                    $gallery_path = "assets/img/gallery/";
+                    $activity_images = ['9.JPG', 'DSC09022.JPG', 'IMG_20230108_172354.jpg', 'IMG_4096.JPG', 'IMG_4345.jpeg', 'IMG_4948.JPG'];
+                    foreach ($activity_images as $img) {
+                        $img_url = htmlspecialchars($gallery_path . $img, ENT_QUOTES, 'UTF-8');
+                    ?>
+                        <div class="col-12 col-md-6 col-lg-4 d-flex mb-4">
+                            <!-- Card -->
+                            <a class="card rounded bg-image animate-up-3 w-100 shadow-sm" href="<?= $img_url ?>" target="_blank" rel="noopener noreferrer">
+                                <!-- Body -->
+                                <div class="card-body p-0 z-2 text-white">
+                                    <img src="<?= $img_url ?>" class="card-img-top" alt="กิจกรรมของเราในอำเภอสามโคก" style="height: 220px; object-fit: cover;">
+                                </div>
+                            </a>
+                        </div>
+                    <?php } ?>
                 </div>
                 <div class="col text-center mt-lg-6">
                     <a href="gallery.php" class="btn btn-secondary animate-hover">

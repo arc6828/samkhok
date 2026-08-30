@@ -7,9 +7,10 @@ $keywords = "สามโคก, ปทุมธานี, แม่น้ำเ
 $url = "https://www.samkhok.org/gallery.php";
 $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
 
-$path = "https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/gallery/";
-$images = ['9.JPG', 'DSC09022.JPG', 'IMG_20230108_172354.jpg', 'IMG_4096.JPG', 'IMG_4345.jpeg', 'IMG_4948.JPG', 'IMG_6400.JPG', 'IMG_6422.JPG', 'IMG_6580.JPG', 'IMG_6743.JPG', 'IMG_6784.JPG',  'IMG_7618.jpeg'];
-
+require_once __DIR__ . '/components/data-service.php';
+$gallery_data = get_gallery_data();
+$path = $gallery_data->base_path ?? "assets/img/gallery/";
+$images = $gallery_data->images ?? [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +40,7 @@ $images = ['9.JPG', 'DSC09022.JPG', 'IMG_20230108_172354.jpg', 'IMG_4096.JPG', '
                             <a class=" p-4 " href="<?= $path . $item ?>" target="_blank">
                                 <!-- Body -->
                                 <div class="">
-                                    <img src="<?= $path . $item ?>" class="img-thumbnail " alt="Related news image 1" style="width:100%; height:250px; object-fit:cover;">
+                                    <img src="<?= $path . $item ?>" class="img-thumbnail" alt="ภาพกิจกรรมชุมชนสามโคก" style="width:100%; height:250px; object-fit:cover;">
                                 </div>
                             </a>
                         </div>

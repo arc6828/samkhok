@@ -1,0 +1,10 @@
+# Cache Directory (Ignore all cache files except .gitkeep)
+cache/*
+!cache/.gitkeep
+
+# System & Editor Files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

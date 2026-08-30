@@ -7,6 +7,10 @@ $keywords = "สามโคก, ปทุมธานี, แม่น้ำเ
 $url = "https://www.samkhok.org/contact.php";
 $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
 
+require_once __DIR__ . '/components/data-service.php';
+$site = get_site_config();
+$researchers = get_researchers_data();
+$lead = isset($researchers[0]) ? $researchers[0] : (object)[];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,40 +35,40 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                 </div>
                 <div class="row pb-4">
                     <div class="col-lg-4 text-center">
-                        <img class="img-thumbnail" src="https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/researchers/wisrut.jpg" width="100%" style="max-width : 150px;">
+                        <img class="img-thumbnail" src="<?= htmlspecialchars($lead->image ?? 'assets/img/researchers/wisrut.jpg', ENT_QUOTES, 'UTF-8') ?>" width="100%" style="max-width: 150px;" alt="<?= htmlspecialchars($lead->name ?? 'อ.วิศรุต ขวัญคุ้ม', ENT_QUOTES, 'UTF-8') ?>">
                     </div>
                     <div class="col-lg-8 py-4">
-                        <h5>อ.วิศรุต ขวัญคุ้ม</h5>
+                        <h5><?= htmlspecialchars($lead->name ?? 'อ.วิศรุต ขวัญคุ้ม', ENT_QUOTES, 'UTF-8') ?></h5>
                         <p class="prompt">
-                            หัวหน้าโครงการวิจัย
+                            <?= htmlspecialchars($lead->position ?? 'หัวหน้าโครงการวิจัย', ENT_QUOTES, 'UTF-8') ?>
                             <br>โครงการพัฒนาแฟลตฟอร์มการจัดการเรียนรู้สาหรับสถานศึกษาวิวัฒน์ชุมชน
-                            <br>มือถือ : 08-6202-0656
-                            <br>Email : wisrut@vru.ac.th
-                            <br>Website คณะ : <a href="http://sci.vru.ac.th">http://sci.vru.ac.th</a>
+                            <br>มือถือ : <?= htmlspecialchars($lead->phone ?? '08-6202-0656', ENT_QUOTES, 'UTF-8') ?>
+                            <br>Email : <?= htmlspecialchars($lead->email ?? 'wisrut@vru.ac.th', ENT_QUOTES, 'UTF-8') ?>
+                            <br>Website คณะ : <a href="<?= htmlspecialchars($site->website ?? 'http://sci.vru.ac.th', ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($site->website ?? 'http://sci.vru.ac.th', ENT_QUOTES, 'UTF-8') ?></a>
                         </p>
                     </div>
 
                 </div>
                 <div class="row pb-4 mt-4">
                     <div class="col-lg-4 text-center">
-                        <img class="" src="https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/logo/sci.png" width="100%" style="max-width : 150px;">
+                        <img class="" src="assets/img/logo/sci.png" width="100%" style="max-width: 150px;" alt="คณะวิทยาศาสตร์และเทคโนโลยี">
                     </div>
                     <div class="col-lg-8 ">
-                        <h5>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์</h5>
+                        <h5><?= htmlspecialchars($site->faculty ?? 'คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์', ENT_QUOTES, 'UTF-8') ?></h5>
                         <p class="prompt">
-                            ที่อยู่: เลขที่ 1 หมู่ 20 ถนนพหลโยธิน กม. 48 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 13180
-                            <br>โทรศัพท์ : 0-2529-3850 , ภายในเบอร์ : 161
-                            <br>โทรสาร : 02-909-3029
-                            <br>มือถือ : 09-2265-8433
-                            <br>Email : sciencetech@vru.ac.th
-                            <br>Website คณะ : <a href="http://sci.vru.ac.th">http://sci.vru.ac.th</a>
+                            ที่อยู่: <?= htmlspecialchars($site->address ?? '', ENT_QUOTES, 'UTF-8') ?>
+                            <br>โทรศัพท์ : <?= htmlspecialchars($site->phone ?? '', ENT_QUOTES, 'UTF-8') ?>
+                            <br>โทรสาร : <?= htmlspecialchars($site->fax ?? '', ENT_QUOTES, 'UTF-8') ?>
+                            <br>มือถือ : <?= htmlspecialchars($site->mobile ?? '', ENT_QUOTES, 'UTF-8') ?>
+                            <br>Email : <?= htmlspecialchars($site->email ?? '', ENT_QUOTES, 'UTF-8') ?>
+                            <br>Website คณะ : <a href="<?= htmlspecialchars($site->website ?? 'http://sci.vru.ac.th', ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($site->website ?? 'http://sci.vru.ac.th', ENT_QUOTES, 'UTF-8') ?></a>
                         </p>
                     </div>
 
                 </div>
                 <div class="row pb-4 mt-4">
                     <div class="col-lg-4 text-center">
-                        <img class="rounded-circle" src="https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/logo/dise.jpg" width="100%" style="max-width : 125px;">
+                        <img class="rounded-circle" src="assets/img/logo/dise.jpg" width="100%" style="max-width : 125px;" alt="หลักสูตรนวัตกรรมดิจิทัล">
                     </div>
                     <div class="col-lg-8 ">
                         <h5>หลักสูตรนวัตกรรมดิจิทัลและวิศวกรรมซอฟต์แวร์</h5>
@@ -72,13 +76,13 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                             ที่อยู่: เลขที่ 1 หมู่ 20 ถนนพหลโยธิน กม. 48 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 13180
                             <br>โทรศัพท์ : 0-2529-3850 , ภายในเบอร์ : 161
                             <br>Email : sciencetech@vru.ac.th
-                            <br>Website หลักสูตร : <a href="http://dise.vru.ac.th">http://dise.vru.ac.th</a>
+                            <br>Website หลักสูตร : <a href="http://dise.vru.ac.th" target="_blank" rel="noopener noreferrer">http://dise.vru.ac.th</a>
                         </p>
                     </div>
                 </div>
                 <div class="row pb-4 mt-4">
                     <div class="col-lg-4 text-center">
-                        <img class="rounded-circle" src="https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/logo/it.png" width="100%" style="max-width : 150px;">
+                        <img class="rounded-circle" src="assets/img/logo/it.png" width="100%" style="max-width : 150px;" alt="หลักสูตรเทคโนโลยีสารสนเทศ">
                     </div>
                     <div class="col-lg-8 ">
                         <h5>หลักสูตรเทคโนโลยีสารสนเทศ</h5>
@@ -86,13 +90,13 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                             ที่อยู่: เลขที่ 1 หมู่ 20 ถนนพหลโยธิน กม. 48 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 13180
                             <br>โทรศัพท์ : 0-2529-3850 , ภายในเบอร์ : 161
                             <br>Email : sciencetech@vru.ac.th
-                            <br>Website หลักสูตร : <a href="http://comit.vru.ac.th">http://comit.vru.ac.th</a>
+                            <br>Website หลักสูตร : <a href="http://comit.vru.ac.th" target="_blank" rel="noopener noreferrer">http://comit.vru.ac.th</a>
                         </p>
                     </div>
                 </div>
                 <div class="row pb-4 mt-4">
                     <div class="col-lg-4 text-center">
-                        <img class="rounded-circle" src="https://raw.githubusercontent.com/arc6828/samkhok/main/assets/img/logo/cs.png" width="100%" style="max-width : 80px;">
+                        <img class="rounded-circle" src="assets/img/logo/cs.png" width="100%" style="max-width : 80px;" alt="หลักสูตรวิทยาการคอมพิวเตอร์">
                     </div>
                     <div class="col-lg-8 ">
                         <h5>หลักสูตรวิทยาการคอมพิวเตอร์</h5>
@@ -100,7 +104,7 @@ $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
                             ที่อยู่: เลขที่ 1 หมู่ 20 ถนนพหลโยธิน กม. 48 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 13180
                             <br>โทรศัพท์ : 0-2529-3850 , ภายในเบอร์ : 161
                             <br>Email : sciencetech@vru.ac.th
-                            <br>Website หลักสูตร : <a href="http://cs.vru.ac.th">http://cs.vru.ac.th</a>
+                            <br>Website หลักสูตร : <a href="http://cs.vru.ac.th" target="_blank" rel="noopener noreferrer">http://cs.vru.ac.th</a>
                         </p>
                     </div>
                 </div>

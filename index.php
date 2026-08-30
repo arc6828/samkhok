@@ -7,14 +7,16 @@ $keywords = "สามโคก, ปทุมธานี, แม่น้ำเ
 $url = "https://www.samkhok.org";
 $image = "https://miro.medium.com/max/1400/1*v_-qDdjsr35MepgtUPOdvg.webp";
 
+require_once __DIR__ . '/components/medium-service.php';
+
 // DATA
-$latest = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok"));
-$travel = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/travel"));
-$culture = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/culture"));
-$thinking = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/thinking"));
-$samkhok = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/samkhok"));
-$vip = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/vip"));
-$general = json_decode(file_get_contents("https://ckartisan.com/api/medium/feed/samkhok/tagged/general"));
+$latest = get_samkhok_medium_feed();
+$travel = get_samkhok_medium_feed("travel");
+$culture = get_samkhok_medium_feed("culture");
+$thinking = get_samkhok_medium_feed("thinking");
+$samkhok = get_samkhok_medium_feed("samkhok");
+$vip = get_samkhok_medium_feed("vip");
+$general = get_samkhok_medium_feed("general");
 
 
 

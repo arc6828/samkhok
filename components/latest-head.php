@@ -11,56 +11,66 @@
                 <div class="col-lg-12">
                     <div class="posts-slide-wrap">
                         <div class="posts-slide" id="posts-slide">
-                            <?php foreach ($data->channel->item as $item) { ?>
-                                <div class="item">
-                                    <div class="post-entry d-lg-flex">
-                                        <div class="me-lg-5 thumbnail mb-4 mb-lg-0">
-                                            <a target="_blank" href="<?= $item->link ?>">
-                                                <img loading="lazy" src="<?= $item->image_url ?>" alt="Image" class="img-fluid" style="width:100%;  object-fit:cover;" />
-                                            </a>
-                                        </div>
-                                        <div class="content align-self-center">
-                                            <div class="post-meta mb-3">
-                                                <?php if (isset($item->category)) { ?>
-                                                    <?php if (is_array($item->category)) { ?>
-                                                        <?php foreach (preg_grep("/[^A-z]+/", $item->category) as $i => $c) { ?>
-                                                            <a href="category.php?q=<?= $c ?>" class="category"><?= $c ?></a> |
-                                                        <?php } ?>
-                                                    <?php } else { ?>
-                                                        <a href="category.php?q=<?= $item->category ?>" class="category"><?= $item->category ?></a>
-                                                    <?php } ?>
-                                                <?php } ?>
-                                                &mdash;
-                                                <span class="date"><?= $item->pubDate ?></span>
+                            <?php 
+                            $items = (isset($data) && is_object($data) && isset($data->channel->item) && is_array($data->channel->item)) ? $data->channel->item : [];
+                            if (!empty($items)) {
+                                foreach ($items as $item) { 
+                                    $post_link = get_post_url($item);
+                                    $creator_name = isset($item->creator) ? htmlspecialchars($item->creator, ENT_QUOTES, 'UTF-8') : 'ทีมงานสามโคก';
+                                    $author_img = (isset($item->creator) && isset($author_images[$item->creator])) ? htmlspecialchars($author_images[$item->creator], ENT_QUOTES, 'UTF-8') : 'assets/img/logo.png';
+                                    $item_title = isset($item->title) ? htmlspecialchars($item->title, ENT_QUOTES, 'UTF-8') : '';
+                                    $item_img = isset($item->image_url) ? htmlspecialchars($item->image_url, ENT_QUOTES, 'UTF-8') : 'assets/img/logo.png';
+                                    $item_pubDate = isset($item->pubDate) ? htmlspecialchars($item->pubDate, ENT_QUOTES, 'UTF-8') : '';
+                                    $item_paragraph = isset($item->first_paragraph) ? htmlspecialchars(mb_substr($item->first_paragraph, 0, 140), ENT_QUOTES, 'UTF-8') : '';
+                            ?>
+                                    <div class="item">
+                                        <div class="post-entry d-lg-flex">
+                                            <div class="me-lg-5 thumbnail mb-4 mb-lg-0">
+                                                <a href="<?= $post_link ?>">
+                                                    <img loading="lazy" src="<?= $item_img ?>" alt="<?= $item_title ?>" class="img-fluid" style="width:100%; object-fit:cover;" />
+                                                </a>
                                             </div>
-                                            <h2 class="heading">
-                                                <a target="_blank" href="<?= $item->link ?>"><?= $item->title ?></a>
-                                            </h2>
-                                            <p><?= mb_substr($item->first_paragraph, 0, 140) ?> ...</p>
-                                            <a href="#" class="post-author d-flex align-items-center">
-                                                <div class="author-pic">
-                                                    <img loading="lazy" src="<?= $author_images[$item->creator] ?>" alt="<?= $item->creator ?>" />
+                                            <div class="content align-self-center">
+                                                <div class="post-meta mb-3">
+                                                    <?php if (isset($item->category)) { ?>
+                                                        <?php if (is_array($item->category)) { ?>
+                                                            <?php foreach (preg_grep("/[^A-z]+/", $item->category) as $i => $c) { ?>
+                                                                <a href="category.php?q=<?= urlencode($c) ?>" class="category"><?= htmlspecialchars($c, ENT_QUOTES, 'UTF-8') ?></a> |
+                                                            <?php } ?>
+                                                        <?php } else { ?>
+                                                            <a href="category.php?q=<?= urlencode($item->category) ?>" class="category"><?= htmlspecialchars($item->category, ENT_QUOTES, 'UTF-8') ?></a>
+                                                        <?php } ?>
+                                                    <?php } ?>
+                                                    &mdash;
+                                                    <span class="date"><?= $item_pubDate ?></span>
                                                 </div>
-                                                <div class="text">
-                                                    <strong><?= $item->creator ?></strong>
-                                                    <span>Writer</span>
-                                                </div>
-                                            </a>
+                                                <h2 class="heading">
+                                                    <a href="<?= $post_link ?>"><?= $item_title ?></a>
+                                                </h2>
+                                                <p><?= $item_paragraph ?> ...</p>
+                                                <a href="#" class="post-author d-flex align-items-center">
+                                                    <div class="author-pic">
+                                                        <img loading="lazy" src="<?= $author_img ?>" alt="<?= $creator_name ?>" />
+                                                    </div>
+                                                    <div class="text">
+                                                        <strong><?= $creator_name ?></strong>
+                                                        <span>Writer</span>
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-
-                                <?php break; ?>
-                                <!-- //  <hr />  -->
+                                    <?php break; ?>
+                            <?php 
+                                } 
+                            } else { 
+                            ?>
+                                <div class="text-center py-4 text-muted">ไม่พบข้อมูลบทความ</div>
                             <?php } ?>
-
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
 </div>
